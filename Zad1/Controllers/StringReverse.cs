@@ -12,7 +12,9 @@ namespace Zad1.Controllers
         [Route("api/StringReverse/{paramOne}")]
         public string Get(string paramOne)
         {
-          
+            char[] charArray = paramOne.ToCharArray();
+            Array.Reverse(charArray);
+            return new string(charArray);
 
         }
     }
